@@ -1,0 +1,14 @@
+.jumbotron,
+.top {
+    background-color: rgb(181, 181, 210);
+    background-image: url("public/assets/images/newspapersonwall.jpg");
+
+}
+
+h1 {
+    color: green;
+}
+
+body {
+    background-image: url("public/assets/images/newspapersonwall.jpg");
+}
