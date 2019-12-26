@@ -19,13 +19,13 @@ var app = express();
 //set -up express router
 //require our routes file pass our router object
 var router = express.Router();
-// require("./config/routes")(router);
+require("./config/routes")(router);
 
 // Make public a static folder
-app.use(express.static(__dirname + "./public"));
+app.use(express.static(__dirname + "/public"));
 
 app.engine("handlebars", exphbs({
-    defaultlayout: "main"
+    defaultLayout: "main"
 }));
 app.set("view engine", "handlebars");
 
@@ -39,6 +39,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(router);
 
+//(node: 9960) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version.To use the new parser, pass option {
+////   useNewUrlParser: true} to MongoClient.connect.
 
 //If depoyed use the deployed databse- otherwise use the local mongoHeadlines databse
 var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";

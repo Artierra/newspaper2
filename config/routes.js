@@ -1,14 +1,14 @@
 module.exports = function (router) {
-    //this route renders the oe page
-    router.get("/"),
+    //this route renders the home page
+    router.get("/",
         function (req, res) {
             res.render("home");
-        }
+        });
     //this route renders the saved page
-    router.get("/saved"),
+    router.get("/saved",
         function (req, res) {
             res.render("saved");
-        }
+        });
 }
 
 
